@@ -9,11 +9,7 @@ app.use(express.json());
 
 // ✅ Correct CORS config for your deployment
 app.use(cors({
-  origin: [
-    'https://travaio-olive.vercel.app', // your Vercel site
-    'http://localhost:5500',            // local dev (VSCode Live Server)
-    'http://127.0.0.1:5500'
-  ],
+  origin: ['*'  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
